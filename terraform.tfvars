@@ -1,4 +1,4 @@
-servername = "calabvm"
+servername = "cloudacademylabs"
 subnet = "10.0.1.0/24"
 os_type = "linux"
 disk = {
