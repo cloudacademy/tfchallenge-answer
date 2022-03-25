@@ -37,7 +37,8 @@ resource "aws_instance" "server" {
     ami           = lookup(var.ami_ids, var.os_type, null)
     instance_type = var.instance_size
     vpc_security_group_ids = [aws_vpc.example.default_security_group_id]
-    subnet_id = aws_subnet.example.id               
+    subnet_id = aws_subnet.example.id          
+    root_block_device = var.disk
     
     tags = {
         Name = var.servername
