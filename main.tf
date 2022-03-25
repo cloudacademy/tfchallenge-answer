@@ -38,7 +38,12 @@ resource "aws_instance" "server" {
     instance_type = var.instance_size
     vpc_security_group_ids = [aws_vpc.example.default_security_group_id]
     subnet_id = aws_subnet.example.id          
-    root_block_device = var.disk
+    root_block_device {
+        delete_on_termination = var.disk.delete_on_termination
+        encrypted = var.disk.encrypted
+        volume_size = var.disk.volume_size
+        volume_type = var.disk.volume_type
+    }
     
     tags = {
         Name = var.servername
