@@ -4,6 +4,6 @@ os_type = "linux"
 disk = {
     delete_on_termination = false
     encrypted = true
-    volume_size = "10"
+    volume_size = "20"
     volume_type = "standard"
 }
