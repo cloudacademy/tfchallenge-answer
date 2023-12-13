@@ -20,7 +20,7 @@ aws dynamodb create-table \
         AttributeName=LockID,KeyType=HASH \
     --region us-west-2 \
     --provisioned-throughput \
-        ReadCapacityUnits=20,WriteCapacityUnits=20
+        ReadCapacityUnits=5,WriteCapacityUnits=5
 
 TABLE=$(aws dynamodb list-tables --region us-west-2 --query "TableNames[]" --output text)
 
