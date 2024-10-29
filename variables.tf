@@ -14,7 +14,7 @@ variable "ami_ids" {
     description = "AMI ID's to deploy"
 
     default = {
-        linux = "ami-0d398eb3480cb04e7"
+        linux = "ami-00aa319b0f20192da"
         windows = "ami-0afb7a78e89642197"
     }
 }
